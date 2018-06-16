@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "841238168667",
+    "firebase_url": "https://gameintroduction-94bea.firebaseio.com",
+    "project_id": "gameintroduction-94bea",
+    "storage_bucket": "gameintroduction-94bea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841238168667:android:b372ef53c845e07e",
+        "android_client_info": {
+          "package_name": "com.example.dsm2016.gameintroduction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841238168667-ell6fpr3s7cflr1i04iergdimr1ih902.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dsm2016.gameintroduction",
+            "certificate_hash": "85e2993825df7d02abcbf13dbad3ecac93070fe2"
+          }
+        },
+        {
+          "client_id": "841238168667-clflhnrqhk5vb818qdug3d87c9agr94u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAijZKVWjD1sfr-wwf4haAJ1AW7vo2wcdQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841238168667-clflhnrqhk5vb818qdug3d87c9agr94u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

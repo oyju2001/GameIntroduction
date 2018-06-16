@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.example.dsm2016.gameintroduction.AddRuleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="게임 이름"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <TextView
+        android:id="@+id/text_AddRuleGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="내용"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_constraintTop_creator="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="지역"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_big"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <Spinner
+            android:id="@+id/spinner_small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="규칙"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <EditText
+        android:id="@+id/input_rule"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:inputType="textMultiLine"
+        android:hint="규칙을 입력해 주세요"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</LinearLayout>
