@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="340dp"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="300dp"
+    android:background="@color/white"
+    tools:context=".GameFilterPopupActivity">
 
-    <TextView
-        android:id="@+id/childName"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:visibility="invisible" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="20dp"
         android:orientation="horizontal"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
             android:text="게임 인원"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/black"
             tools:layout_constraintTop_creator="1" />
 
         <EditText
@@ -36,14 +35,14 @@
             android:layout_width="110dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:background="@drawable/back"
             android:ems="10"
             android:hint="숫자만 입력"
             android:inputType="number"
             android:digits="0123456789"
-            android:maxLength="3"
+            android:maxLength="2"
             tools:layout_constraintBottom_creator="1"
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintRight_creator="1"
@@ -55,9 +54,10 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:text="명"
+            android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             tools:layout_constraintTop_creator="1" />
 
@@ -65,18 +65,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
             android:text="소요 시간"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/black"
             tools:layout_constraintTop_creator="1" />
 
         <EditText
@@ -84,8 +85,8 @@
             android:layout_width="110dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/back"
             android:ems="10"
             android:hint="숫자만 입력"
@@ -99,11 +100,12 @@
             android:layout_weight="0.00" />
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textView11"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:text="분"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -113,21 +115,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
             android:text="재료"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/black"
             tools:layout_constraintTop_creator="1" />
 
         <RadioGroup
+            android:textColor="@color/black"
             android:id="@+id/radio_material"
             android:layout_width="match_parent"
             android:layout_height="45dp"
@@ -136,12 +139,12 @@
 
             <RadioButton
                 android:id="@+id/radio_materialYes"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
                 android:text="유"
+                android:textColor="@color/black"
                 tools:layout_constraintBottom_creator="1"
                 tools:layout_constraintLeft_creator="1"
                 tools:layout_constraintRight_creator="1"
@@ -149,22 +152,22 @@
 
             <RadioButton
                 android:id="@+id/radio_materialNo"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="무"
+                android:textColor="@color/black"
                 tools:layout_constraintTop_creator="1" />
 
             <RadioButton
                 android:id="@+id/radio_materialYesNo"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="공통"
+                android:textColor="@color/black"
                 tools:layout_constraintBaseline_creator="1"
                 tools:layout_constraintLeft_creator="1"
                 tools:layout_constraintRight_creator="1" />
@@ -173,21 +176,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
             android:text="장소"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/black"
             tools:layout_constraintBottom_creator="1" />
 
         <RadioGroup
+            android:textColor="@color/black"
             android:id="@+id/radio_place"
             android:layout_width="match_parent"
             android:layout_height="45dp"
@@ -196,34 +200,34 @@
 
             <RadioButton
                 android:id="@+id/radio_in"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
                 android:text="실내"
+                android:textColor="@color/black"
                 tools:layout_constraintLeft_creator="1"
                 tools:layout_constraintRight_creator="1"
                 tools:layout_constraintTop_creator="1" />
 
             <RadioButton
                 android:id="@+id/radio_out"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="실외"
+                android:textColor="@color/black"
                 tools:layout_constraintRight_creator="1" />
 
             <RadioButton
                 android:id="@+id/radio_inOut"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="공통"
+                android:textColor="@color/black"
                 tools:layout_constraintTop_creator="1" />
         </RadioGroup>
 
@@ -231,20 +235,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:gravity="right"
         android:orientation="horizontal">
 
         <Button
+            android:layout_marginTop="20dp"
             android:id="@+id/btn_search"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_marginRight="10dp"
-            android:onClick="gameSearch"
+            android:layout_marginRight="15dp"
+            android:onClick="onClose"
             android:text="검색" />
 
     </LinearLayout>
-
 
 
 </LinearLayout>

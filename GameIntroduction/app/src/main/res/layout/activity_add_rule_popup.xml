@@ -10,10 +10,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:orientation="horizontal"/>
+        android:layout_height="20dp"></LinearLayout>
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,6 +26,7 @@
         tools:layout_constraintTop_creator="1" />
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/text_AddRuleGameName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,6 +44,7 @@
         android:orientation="horizontal"/>
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,16 +67,19 @@
         <Spinner
             android:id="@+id/spinner_big"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/back"
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintTop_creator="1" />
 
         <Spinner
+            android:layout_gravity="center_vertical"
             android:id="@+id/spinner_small"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@drawable/back"
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintTop_creator="1" />
 
@@ -86,6 +91,7 @@
         android:orientation="horizontal"/>
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -101,13 +107,13 @@
     <EditText
         android:id="@+id/input_rule"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:inputType="textMultiLine"
-        android:hint="규칙을 입력해 주세요"
+        android:layout_height="224dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/back"
+        android:hint="규칙을 입력해 주세요"
+        android:inputType="textMultiLine"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintTop_creator="1" />
 

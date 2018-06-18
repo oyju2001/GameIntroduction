@@ -22,6 +22,18 @@ public class GameData {
         this.place = place;
     }
 
+    public GameData(String gameName, String numberStart, String numbserEnd, String time,
+                    String material, String place){
+        this.gameName = gameName;
+        this.numberStart = numberStart;
+        this.numberEnd = numbserEnd;
+        this.time = time;
+        this.material = material;
+        this.place = place;
+    }
+
+
+
     public String getGameName() {
         return gameName;
     }

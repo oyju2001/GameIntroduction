@@ -1,7 +1,9 @@
 package com.example.dsm2016.gameintroduction;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +11,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -45,8 +48,18 @@ public class SearchActivity extends AppCompatActivity {
         adapter = new ListviewAdapter();
         listview_search.setAdapter(adapter);
 
-        adapter.addItem("temp","se","eeee","eeeee","fef","efe");
-        adapter.notifyDataSetChanged();
+        listview_search.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //리스트뷰중 하나 눌렀을때 이벤트
+                GameData name = (GameData) adapter.getItem(position);
+
+                Intent intent = new Intent(getApplicationContext(), GameIntroduceActivity.class);
+                intent.putExtra("code", name.getGameName());
+                startActivity(intent);
+            }
+        });
+
 
     }
 

@@ -2,12 +2,14 @@ package com.example.dsm2016.gameintroduction;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
@@ -23,6 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.Iterator;
 
 public class GameIntroduceActivity extends AppCompatActivity {
@@ -157,6 +160,18 @@ public class GameIntroduceActivity extends AppCompatActivity {
             }
         });
 
+        localRule.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //리스트뷰중 하나 눌렀을때 이벤트
+                DataLocalRule name = (DataLocalRule) adapter.getItem(position);
+
+                Intent intent = new Intent(getApplicationContext(), LocalRulePopupActivity.class);
+                intent.putExtra("code", (Parcelable) name);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void setListViewHeightBasedOnItems(ListView listView) {
@@ -173,7 +188,6 @@ public class GameIntroduceActivity extends AppCompatActivity {
             View item = listAdapter.getView(itemPos, null, listView);
             item.measure(0, 0);
             totalItemsHeight += item.getMeasuredHeight();
-            Log.w("aaaa",String.valueOf(totalItemsHeight));
         }
 
         // Get total height of all item dividers.
