@@ -1,87 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context="com.example.dsm2016.gameintroduction.HomeActivity"
     tools:layout_editor_absoluteY="25dp"
     tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-        android:id="@+id/text_title"
-        android:layout_width="203dp"
-        android:layout_height="165dp"
-        android:gravity="center_horizontal"
-        android:text="단체놀이 소개"
-        android:textSize="50sp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="66dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_myGameActivity"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="myGameActivity"
-        android:text="내 게임"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="27dp"
-        app:layout_constraintTop_toBottomOf="@+id/btn_filterActivity"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/btn_filterActivity"
-        android:layout_marginLeft="-8dp" />
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_filterActivity"
+        <TextView
+            android:layout_weight="2"
+            android:id="@+id/text_title"
+            android:layout_width="203dp"
+            android:layout_height="165dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="단체놀이 소개"
+            android:textColor="@color/mintM"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
         android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
-        android:onClick="filterActivity"
-        android:text="게임 분류"
-        android:layout_marginStart="72dp"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="187dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="64dp" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_addGameActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="addGameActivity"
-        android:text="게임 추가"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_myGameActivity"
-        app:layout_constraintRight_toRightOf="@+id/btn_searchActivity"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/btn_searchActivity"
-        app:layout_constraintTop_toTopOf="@+id/btn_myGameActivity"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/btn_searchActivity"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:onClick="searchActivity"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/darkGray"
+            android:text="게임 검색" />
 
-    <Button
-        android:id="@+id/btn_searchActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="searchActivity"
-        android:text="게임 검색"
-        android:layout_marginStart="69dp"
-        android:layout_marginEnd="67dp"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/btn_addGameActivity"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="27dp"
-        app:layout_constraintLeft_toRightOf="@+id/btn_filterActivity"
-        app:layout_constraintHorizontal_bias="0.479" />
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/btn_filterActivity"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:onClick="filterActivity"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/darkGray"
+            android:text="게임 분류" />
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/btn_addGameActivity"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:onClick="addGameActivity"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/darkGray"
+            android:text="게임 추가" />
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/btn_myGameActivity"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:onClick="myGameActivity"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/darkGray"
+            android:text="내 게임" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

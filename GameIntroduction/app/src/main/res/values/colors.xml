@@ -6,4 +6,9 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="darkGray">#222222</color>
+    <color name="mint">#79E5CB</color>
+    <color name="mintM">#44AB6D</color>
+    <color name="gray">#f1f1f1</color>
+    <color name="grayM">#cacaca</color>
+    <color name="orange">#E18F1D</color>
 </resources>

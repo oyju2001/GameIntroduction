@@ -3,7 +3,6 @@ package com.example.dsm2016.gameintroduction;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Parcelable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MotionEvent;
@@ -19,7 +18,7 @@ public class GameFilterPopupActivity extends Activity {
 
     EditText input_num, input_time;
     RadioGroup radio_material, radio_place;
-    Button btn_search;
+    Button btn_search, btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +32,17 @@ public class GameFilterPopupActivity extends Activity {
         radio_material = (RadioGroup) findViewById(R.id.radio_material);
         radio_place = (RadioGroup) findViewById(R.id.radio_place);
         btn_search = (Button) findViewById(R.id.btn_search);
+        btn_back = (Button) findViewById(R.id.btn_back_popup);
 
     }
 
     public void onClose(View v){
+        Intent intent = new Intent();
+        setResult(RESULT_CANCELED, intent);
+        finish();
+    }
+
+    public void onGo(View v){
         if(TextUtils.isEmpty(input_num.getText())){
             Toast.makeText(getApplicationContext(), "인원수를 입력해주세요", Toast.LENGTH_SHORT).show();
             return;

@@ -17,9 +17,9 @@
     <item android:state_focused="true" android:state_enabled="true">
         <shape>
             <stroke
-                android:width="2dip" android:color="#666666"/>
+                android:width="2dip" android:color="@color/mintM"/>
 
-            <corners android:radius="5dip"/>
+            <corners android:radius="7dip"/>
 
             <padding
                 android:left="7dip"
@@ -42,9 +42,9 @@
     <item android:state_enabled="true">
         <shape>
             <stroke
-                android:width="0.5dip" android:color="#999999"/>
+                android:width="2dip" android:color="@color/mintM"/>
 
-            <corners android:radius="5dip"/>
+            <corners android:radius="7dip"/>
 
             <padding
                 android:left="7dip"

@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="340dp"
     android:orientation="vertical"
-    android:layout_height="300dp"
+    android:layout_height="340dp"
     android:background="@color/white"
     tools:context=".GameFilterPopupActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/mintM" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +25,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:textSize="18dp"
             android:id="@+id/textView1"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -46,10 +53,10 @@
             tools:layout_constraintBottom_creator="1"
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintRight_creator="1"
-            tools:layout_constraintTop_creator="1"
-            android:layout_weight="0.00" />
+            tools:layout_constraintTop_creator="1" />
 
         <TextView
+            android:textSize="18dp"
             android:id="@+id/textView8"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -69,6 +76,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:textSize="18dp"
             android:id="@+id/textView2"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -86,7 +94,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/back"
             android:ems="10"
             android:hint="숫자만 입력"
@@ -96,10 +104,10 @@
             tools:layout_constraintBottom_creator="1"
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintRight_creator="1"
-            tools:layout_constraintTop_creator="1"
-            android:layout_weight="0.00" />
+            tools:layout_constraintTop_creator="1"/>
 
         <TextView
+            android:textSize="18dp"
             android:textColor="@color/black"
             android:id="@+id/textView11"
             android:layout_width="100dp"
@@ -124,9 +132,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:text="재료"
+            android:text="준비물"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/black"
+            android:textSize="18dp"
             tools:layout_constraintTop_creator="1" />
 
         <RadioGroup
@@ -138,6 +147,8 @@
             android:layout_gravity="center_vertical">
 
             <RadioButton
+                android:textSize="15dp"
+                android:buttonTint="@color/mintM"
                 android:id="@+id/radio_materialYes"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
@@ -151,6 +162,8 @@
                 tools:layout_constraintTop_creator="1" />
 
             <RadioButton
+                android:textSize="15dp"
+                android:buttonTint="@color/mintM"
                 android:id="@+id/radio_materialNo"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
@@ -161,6 +174,8 @@
                 tools:layout_constraintTop_creator="1" />
 
             <RadioButton
+                android:textSize="15dp"
+                android:buttonTint="@color/mintM"
                 android:id="@+id/radio_materialYesNo"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
@@ -180,6 +195,8 @@
         android:orientation="horizontal">
 
         <TextView
+            android:textSize="18dp"
+            android:buttonTint="@color/mintM"
             android:id="@+id/textView4"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -199,6 +216,8 @@
             android:layout_gravity="center_vertical">
 
             <RadioButton
+                android:textSize="15dp"
+                android:buttonTint="@color/mintM"
                 android:id="@+id/radio_in"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
@@ -211,6 +230,8 @@
                 tools:layout_constraintTop_creator="1" />
 
             <RadioButton
+                android:textSize="15dp"
+                android:buttonTint="@color/mintM"
                 android:id="@+id/radio_out"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
@@ -221,6 +242,8 @@
                 tools:layout_constraintRight_creator="1" />
 
             <RadioButton
+                android:textSize="15dp"
+                android:buttonTint="@color/mintM"
                 android:id="@+id/radio_inOut"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
@@ -233,22 +256,36 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
         android:orientation="horizontal">
 
         <Button
-            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:textColor="@color/mintM"
+            android:text="취소"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_back_popup"
+            android:onClick="onClose"/>
+
+        <Button
+            android:textSize="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
             android:id="@+id/btn_search"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_marginRight="15dp"
-            android:onClick="onClose"
+            android:background="@android:color/background_light"
+            android:textColor="@color/mintM"
+            android:onClick="onGo"
             android:text="검색" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>

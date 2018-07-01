@@ -176,7 +176,7 @@ public class AddGameActivity extends AppCompatActivity {
     }
 
     public boolean checkNull(){
-        if(TextUtils.isEmpty(input_gameName.getText())){
+        if(TextUtils.isEmpty(input_gameName.getText().toString().trim())){
             return true;
         }else if(spinner_numStart.getSelectedItem().toString().equals("선택")){
             return true;
@@ -186,13 +186,13 @@ public class AddGameActivity extends AppCompatActivity {
             return true;
         }else if(radio_material.getCheckedRadioButtonId() == -1){
             return true;
-        }else if((radio_material.getCheckedRadioButtonId() == R.id.radio_materialYes) && (TextUtils.isEmpty(input_material.getText())) ){
+        }else if((radio_material.getCheckedRadioButtonId() == R.id.radio_materialYes) && (TextUtils.isEmpty(input_material.getText().toString().trim()))){
                 return true;
         }else if(radio_place.getCheckedRadioButtonId() == -1){
             return true;
         }else if(spinner_big.getSelectedItem().toString().equals("선택")){
             return true;
-        }else if(TextUtils.isEmpty(input_rule.getText())){
+        }else if(TextUtils.isEmpty(input_rule.getText().toString().trim())){
             return true;
         }
         return false;

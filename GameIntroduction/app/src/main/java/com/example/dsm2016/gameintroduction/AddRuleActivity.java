@@ -74,7 +74,7 @@ public class AddRuleActivity extends AppCompatActivity {
                     alert.setTitle("지역을 선택해주세요.");
                     alert.show();
                     return;
-                }else if(TextUtils.isEmpty(input_rule.getText())){
+                }else if(TextUtils.isEmpty(input_rule.getText().toString().trim())){
                     alert.setTitle("규칙을 입력해주세요.");
                     alert.show();
                     return;

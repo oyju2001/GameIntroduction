@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context="com.example.dsm2016.gameintroduction.MyGameActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/mygame_toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/colorPrimary" />
+        android:background="@color/mintM" />
 
     <ListView
         android:layout_margin="10dp"

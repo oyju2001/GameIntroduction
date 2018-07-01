@@ -1,8 +1,10 @@
 package com.example.dsm2016.gameintroduction;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.os.Handler;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -65,8 +68,9 @@ public class SearchActivity extends AppCompatActivity {
 
     public void SearchBtn(View view){
         adapter.clear();
-        //비어있나 확인 후
-        if(TextUtils.isEmpty(input_gameName.getText())) {
+        //비어있나 확인 후 (스페이스..제거)
+        if(TextUtils.isEmpty(input_gameName.getText().toString().trim())) {
+            Toast.makeText(this,"aaa",Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -78,11 +82,10 @@ public class SearchActivity extends AppCompatActivity {
                 while (child.hasNext()){
                     GameData aa = child.next().child("data").getValue(GameData.class);
                     //다 들고옴
-                    if(aa.getGameName().contains(input_gameName.getText())){
+                    if(aa.getGameName().contains(input_gameName.getText().toString().trim())){
                         //같을 경우에는
                         adapter.addItem(aa.getGameName(),aa.getNumberStart(),aa.getNumberEnd(),aa.getTime(),aa.getMaterial(),aa.getPlace());
                     }
-
                 }
                 adapter.notifyDataSetChanged();
             }

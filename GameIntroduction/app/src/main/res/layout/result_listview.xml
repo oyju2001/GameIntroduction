@@ -40,8 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="16dp"
-            android:text=" 분 | 재료 : "/>
+            android:text=" 분 | 준비물 : "
+            android:textSize="16dp" />
 
         <TextView
             android:textSize="16dp"
